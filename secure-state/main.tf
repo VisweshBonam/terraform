@@ -4,13 +4,13 @@ resource "aws_instance" "JoinDevOps" {
   vpc_security_group_ids = [aws_security_group.allow_default_new.id]
 
   tags = {
-    Name = "JoinDevOps-1"
+    Name = "JoinDevOps-2"
   }
 }
 
-resource "aws_security_group" "allow_default_new" {
-  name        = "allow_default_new"
-  description = "sg for allow_default_new"
+resource "aws_security_group" "new_sg" {
+  name        = "new-sg"
+  description = "sg for new-sg"
   ingress {
     from_port        = 0
     to_port          = 0
@@ -29,6 +29,6 @@ resource "aws_security_group" "allow_default_new" {
 
 
   tags = {
-    Name = "allow_default_new"
+    Name = "new-sg"
   }
 }
